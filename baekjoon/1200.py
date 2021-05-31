@@ -1,9 +1,10 @@
 from collections import deque
 
-
+#input 
 N,M,V = map(int,input().split())
 graph = [[] for i in range(N+1)]
 
+# make adj matrix
 for i in range(M):
   a,b = map(int,input().split())
   graph[a].append(b)

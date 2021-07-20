@@ -1,15 +1,18 @@
 function solution(n) {
   let answer = ""
-  while(n){
+  while(n>0){
       let rest = parseInt(n % 3);
-      n = n/3;
-      if(rest === 0){
-        answer += "4";
+      n = parseInt(n/3);
+      
+      if(rest === 0 && n !== 0){
+        answer = "4" + answer;
         n--;
       }
       else{
-        answer += rest;
+        answer = rest + answer;
       }
   }
+  
+
   return answer;
 }

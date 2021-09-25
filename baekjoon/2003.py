@@ -5,8 +5,6 @@ answer,s,e = 0,0,0
 sum = num[0]
 
 while e < length:
-  #print(s,e,sum)
-
   if sum > target:
     sum -= num[s]
     s+=1
@@ -16,16 +14,16 @@ while e < length:
   
   elif sum < target:
     e+=1
-    if e >= length: break
-    sum += num[e]
+    if e < length:
+      sum += num[e]
   
   else:
     answer+=1
     sum -= num[s]
     s+=1
     e+=1
-    if e >= length: break
-    sum += num[e]
+    if e < length: 
+      sum += num[e]
 
 
 
